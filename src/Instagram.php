@@ -1142,6 +1142,25 @@ class Instagram {
     }
   }
 
+ 
+  /**
+  * Show Many
+  *
+  * @param String list $userId (user_id_1, user_id_2, user_id_3)
+  *
+  * @return array
+  *   Friendship status data
+  */
+ 
+  public function showmany($userId)
+  {
+    $temp = $this->request("friendships/show_many/", "user_ids=$userId");
+    return $temp[1];
+  }
+ 
+ 
+ 
+ 
   /**
   * Follow
   *
