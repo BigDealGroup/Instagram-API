@@ -1142,6 +1142,25 @@ class Instagram {
     }
   }
 
+ 
+
+
+  /**
+  * showFriendship 
+  *
+  * @param String $userId
+  *
+  * @return array
+  *   Friendship status data
+  */
+  public function showFriendship($userId)
+  {
+    $temp = $this->request("friendships/show/$userId/");
+    return $temp[1];
+  } 
+ 
+ 
+ 
   /**
   * Follow
   *
